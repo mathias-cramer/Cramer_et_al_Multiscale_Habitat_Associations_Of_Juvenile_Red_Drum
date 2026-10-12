@@ -19,7 +19,7 @@ The repository is intended to provide the materials necessary to reproduce the s
 |---|---|
 | `Tampa_Bay_Red_Drum_Data.csv` | Final site-level analysis dataset used throughout the study. Each row represents one of 51 shoreline assessment sites in the Alafia, Little Manatee, or Manatee rivers. The dataset contains juvenile Red Drum abundance metrics, shoreline and channel habitat characteristics, aggregated fisheries-independent monitoring environmental variables, substrate and sediment measurements, and vegetation percent-cover data. The primary manuscript analyses use the 0–50 mm and 51–100 mm standard-length abundance variables. |
 | `Seine_Transect_Distance_Raw.csv` | Spatial-association table containing the 492 qualifying seine–shoreline associations within 250 m of the 51 shoreline assessment sites. The file includes seine and shoreline identifiers, separation distances, and nearest-neighbor ranks and is used to calculate median seine-to-transect distance for the spatial sensitivity analysis. |
-| `Tampa Bay Red Drum, GIS.ppkx` | GIS data associated with the shoreline assessment sites and spatial components of the study. |
+| `Tampa_Bay_Red_Drum_GIS.gpkg` | GeoPackage containing the spatial datasets used in the final analysis: `ShorelineAssessmentSites` (51 shoreline assessment sites), `FIMSeines_250m` (qualifying fisheries-independent seine locations within the final 250 m spatial criterion), and `SpatialBuffers_250m` (250 m buffers used to associate seine events with shoreline assessment sites). |
 | `Results Tables.xlsx` | Workbook containing the principal statistical results tables and supplementary tables. Sheets include model coefficient tables and Type II likelihood-ratio test results for the 0–50 mm and 51–100 mm Red Drum models (Tables 2–5), as well as complete indicator-species results for both size classes (Supplementary Tables S1–S2). |
 | `Tampa Bay Red Drum, Correlation Analysis.R` | Calculates Spearman rank correlations among continuous habitat and environmental variables and juvenile Red Drum abundance, identifies strong correlations, and generates the correlation matrix presented as Figure 2. |
 | `Tampa Bay Red Drum, GLM Analysis.R` | Primary modeling script. Performs data screening and collinearity assessment, Box–Cox transformation of juvenile abundance, Gaussian generalized linear modeling for both size classes, AIC-based model selection, Type II likelihood-ratio tests, Tukey-adjusted pairwise comparisons of estimated marginal means, model diagnostics, and generation of model-prediction figures. |
@@ -59,7 +59,7 @@ Required R packages are identified within the individual scripts.
 
 The materials provided in this repository are publicly available for purposes including reproducibility, research, education, and further scientific analysis.
 
-The repository contains the final analysis-ready site-level dataset and derived spatial-association data used for the analyses reported in the manuscript. It does not reproduce the complete underlying fisheries-independent monitoring database or all intermediate working files used during data preparation.
+The repository contains the final analysis-ready site-level dataset, derived spatial-association data, GIS materials, analysis scripts, and results tables used for the analyses reported in the manuscript. It does not reproduce the complete underlying fisheries-independent monitoring database or all intermediate working files used during data preparation.
 
 ### Code
 
@@ -67,7 +67,7 @@ The R scripts in this repository are distributed under the **MIT License**. See 
 
 ### Data and other research materials
 
-The data, GIS materials, and tabular results in the `Materials` folder are distributed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE_DATA`](LICENSE_DATA) for details.
+The data, GIS materials, and tabular results in the `Materials` folder are distributed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE_DATA.md`](LICENSE_DATA.md) for details.
 
 ---
 
